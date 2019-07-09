@@ -1,3 +1,47 @@
-<p>
-  division works!
-</p>
+<div class="container-fluid justify-content-center">
+  <div class="row justify-content-center">
+    <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <h3>AFC</h3>
+      <table class="table">
+        <thead style="color: white; background-color: #003369;">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Team Name</th>
+            <th scope="col">Conference</th>
+            <th scope="col">Division</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let team of AFCteams; let i = index">
+          <tr>
+            <th scope="row">{{ i+1 }}</th>
+            <td>{{ team.name }} <strong>{{ team.nickname }}</strong></td>
+            <td>{{ team.conference }}</td>
+            <td>{{ team.division }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12">
+      <h3>NFC</h3>
+      <table class="table">
+        <thead style="color: white; background-color: #003369;">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Team Name</th>
+            <th scope="col">Conference</th>
+            <th scope="col">Division</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let team of NFCteams; let i = index">
+          <tr>
+            <th scope="row">{{ i+1 }}</th>
+            <td>{{ team.name }} <strong>{{ team.nickname }}</strong></td>
+            <td>{{ team.conference }}</td>
+            <td>{{ team.division }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

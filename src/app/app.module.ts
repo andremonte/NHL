@@ -14,6 +14,8 @@ import { TeamsComponent } from './teams/teams.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConferenceComponent } from './conference/conference.component';
 import { DivisionComponent } from './division/division.component';
+import { DataTableComponent } from './data-table/data-table.component';
+import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 
 
 @NgModule({
@@ -26,12 +28,16 @@ import { DivisionComponent } from './division/division.component';
     TeamsComponent,
     ConferenceComponent,
     DivisionComponent,
+    DataTableComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [TeamService],
   bootstrap: [AppComponent]
