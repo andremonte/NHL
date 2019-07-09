@@ -2,6 +2,7 @@ import { DataSource } from '@angular/cdk/collections';
 import { MatPaginator, MatSort } from '@angular/material';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
+import { TeamService } from '../Team/team.service';
 
 // TODO: Replace this with your own data model type
 export interface Time {
@@ -30,7 +31,7 @@ export class DataTableDataSource extends DataSource<Time> {
   paginator: MatPaginator;
   sort: MatSort;
 
-  constructor() {
+  constructor(/* teamServ: TeamService */) {
     super();
   }
 

@@ -1,3 +1,4 @@
+import { TeamService } from './../Team/team.service';
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTable } from '@angular/material';
 import { DataTableDataSource, Time } from './data-table-datasource';
