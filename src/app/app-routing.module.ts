@@ -11,7 +11,7 @@ const routes: Routes = [
   { path:'teams', component: TeamsComponent},
   { path: 'conference', component: ConferenceComponent },
   { path: 'division', component: DivisionComponent },
-/*   { path:'', redirectTo:'/home', pathMatch: 'full'}, */
+  { path:'', redirectTo:'/home', pathMatch: 'full'},
 ];
 
 @NgModule({

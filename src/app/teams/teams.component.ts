@@ -9,14 +9,13 @@ import { Team } from '../Team/team.model';
 })
 export class TeamsComponent implements OnInit {
   teams: Team[] = [];
-  getTeamSub;
   filteredTeams: Team[];
 
   constructor(private teamServ: TeamService) { }
 
   ngOnInit() {
     try {
-      this.getTeamSub = this.teamServ.getAllTeams()
+      this.teamServ.getAllTeams()
         .subscribe(data => {
           { this.teams = data.results.data.team; console.log(data) }
           this.filteredTeams = data.teams;
