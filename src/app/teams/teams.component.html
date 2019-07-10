@@ -10,7 +10,7 @@
           <input
           id="dark"
           type="text"
-          class="pt-3 text-line"
+          class="pt-1 text-line"
           placeholder="Search by Team name"
           (keyup)="searchTeam($event)"
           (click)="removeDarkLine()"
@@ -18,6 +18,34 @@
       </div>
     </div>
   </div>
+
+  <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-xl-12, col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <input
+            id="dark"
+            type="text"
+            class="pt-1 text-line"
+            placeholder="Search by Team Conference"
+            (keyup)="searchConference($event)"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-xl-12, col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <input
+              id="dark"
+              type="text"
+              class="pt-1 text-line"
+              placeholder="Search by Division"
+              (keyup)="searchDivision($event)"
+            />
+          </div>
+        </div>
+      </div>
 
 <div style="background-color: #EEEEEE;" class="container-fluid py-5">
   <div class="row justify-content-center table-condensed">

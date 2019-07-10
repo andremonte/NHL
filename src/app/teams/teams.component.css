@@ -4,7 +4,8 @@
 
 .text-line {
   background-color: transparent;
-  font-size: 18px;
+  font-family: 'Bahianita', cursive; 
+  font-size: 30px;
   color: #676363;
   outline: none;
   outline-style: none;

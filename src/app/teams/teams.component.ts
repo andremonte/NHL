@@ -58,4 +58,16 @@ export class TeamsComponent implements OnInit {
     })
   }
 
+  searchConference(event: any) {
+    this.filteredTeams = this.teams.filter((value) => {
+      return value.conference.toLowerCase().includes(event.target.value.toLowerCase());
+    })
+  }
+
+  searchDivision(event: any) {
+    this.filteredTeams = this.teams.filter((value) => {
+      return value.division.toLowerCase().includes(event.target.value.toLowerCase());
+    })
+  }
+
 }
