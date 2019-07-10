@@ -2,6 +2,7 @@ import { TeamService } from './../Team/team.service';
 import { Component, OnInit } from '@angular/core';
 import { Team } from '../Team/team.model';
 import { temporaryAllocator } from '@angular/compiler/src/render3/view/util';
+import { LiteralMapEntry } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-teams',
@@ -20,7 +21,7 @@ export class TeamsComponent implements OnInit {
       this.teamServ.getAllTeams()
         .subscribe(data => {
           { this.teams = data.results.data.team; /* console.log(data) */ }
-          this.filteredTeams = data.teams;
+          this.filteredTeams = data.results.data.team;
         })
     }
     catch (err) {
@@ -39,4 +40,22 @@ export class TeamsComponent implements OnInit {
       }
     } */
   }
+
+  removeDarkLine() {
+    var line = document.getElementById('dark');
+
+    if(line.className.match('dark')) {
+      line.classList.remove('dark');
+    }
+    else { line.classList.add('dark');
+    }
+  }
+
+  searchTeam(event: any) {
+    this.filteredTeams = this.teams.filter((value) => {
+      return value.display_name.toLowerCase().includes(event.target.value.toLowerCase())
+      || value.nickname.toLowerCase().includes(event.target.value.toLowerCase());
+    })
+  }
+
 }

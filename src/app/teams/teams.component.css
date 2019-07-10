@@ -1,3 +1,18 @@
 .click {
   cursor: pointer;
 }
+
+.text-line {
+  background-color: transparent;
+  font-size: 18px;
+  color: #676363;
+  outline: none;
+  outline-style: none;
+  outline-offset: 0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: solid #dad9d9 2px;
+  max-width: 100%;
+  min-width: 100%;
+}

@@ -4,11 +4,26 @@
 
 <!-- <table class="table table-striped table-bordered table-hover table-condensed"></table> -->
 
+<div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-xl-12, col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <input
+          id="dark"
+          type="text"
+          class="pt-3 text-line"
+          placeholder="Search by Team name"
+          (keyup)="searchTeam($event)"
+          (click)="removeDarkLine()"
+        />
+      </div>
+    </div>
+  </div>
 
 <div style="background-color: #EEEEEE;" class="container-fluid py-5">
   <div class="row justify-content-center table-condensed">
     <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-xs-9">
-      <h2 class="pt-2 pb-5" style="text-align: center"><img src="../../assets/images/NFL.png" width="50" height="55"> National Football League</h2>
+
+      <h2 class="pt-2 pb-2" style="text-align: center"><img src="../../assets/images/NFL.png" width="50" height="55"> National Football League</h2>
       <table class="pb-5 table table-striped table-bordered">
         <thead style="color: white; background-color: #003369;">
           <tr>
@@ -19,7 +34,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let team of teams; let i = index">
+          <tr *ngFor="let team of filteredTeams; let i = index">
             <th scope="row">{{ team.id }}</th>
             <td>{{ team.name }} <strong>{{ team.nickname }}</strong></td>
             <td>{{ team.conference }}</td>
