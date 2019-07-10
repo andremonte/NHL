@@ -38,4 +38,12 @@ export class ConferenceComponent implements OnInit {
     }
   }
 
+   sortAFCByName() {
+    this.AFCteams.reverse();
+  }
+
+  sortNFCByName() {
+    this.NFCteams.reverse();
+  }
+
 }

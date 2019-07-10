@@ -17,7 +17,7 @@ export class TeamsComponent implements OnInit {
     try {
       this.teamServ.getAllTeams()
         .subscribe(data => {
-          { this.teams = data.results.data.team; console.log(data) }
+          { this.teams = data.results.data.team; /* console.log(data) */ }
           this.filteredTeams = data.teams;
         })
     }
@@ -25,6 +25,8 @@ export class TeamsComponent implements OnInit {
       throw err;
     }
   }
-
+  sortByName() {
+    this.teams.reverse();
+  }
 
 }
