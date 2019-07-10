@@ -29,7 +29,7 @@ export class TeamsComponent implements OnInit {
     }
   }
   sortByName() {
-    this.teams.reverse();
+    this.filteredTeams.reverse();
   }
 
   sortById() {
