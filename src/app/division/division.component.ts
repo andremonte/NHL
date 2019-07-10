@@ -22,7 +22,7 @@ export class DivisionComponent implements OnInit {
     try {
       this.teamServ.getAllTeams()
         .subscribe(data => {
-          { this.teams = data.results.data.team; this.getConference(); this.getDivision();console.log(data) }
+          { this.teams = data.results.data.team; this.getConference(); this.getDivision(); console.log(data) }
         })
     }
     catch (err) {
@@ -31,9 +31,9 @@ export class DivisionComponent implements OnInit {
   }
 
   getConference() {
-    for(let i = 0; i < this.teams.length; i++) {
-      if(this.teams[i].conference === 'AFC') {
-       this.AFCteams.push(this.teams[i]);
+    for (let i = 0; i < this.teams.length; i++) {
+      if (this.teams[i].conference === 'AFC') {
+        this.AFCteams.push(this.teams[i]);
       }
       else {
         this.NFCteams.push(this.teams[i]);
@@ -42,18 +42,18 @@ export class DivisionComponent implements OnInit {
   }
 
   getDivision() {
-    for(let i = 0; i < this.teams.length; i++) {
-      if(this.teams[i].division === 'North') {
-       this.north.push(this.teams[i]);
+    for (let i = 0; i < this.teams.length; i++) {
+      if (this.teams[i].division === 'North') {
+        this.north.push(this.teams[i]);
       }
-      else if(this.teams[i].division === 'South') {
+      else if (this.teams[i].division === 'South') {
         this.south.push(this.teams[i]);
       }
-      else if(this.teams[i].division === 'East') {
+      else if (this.teams[i].division === 'East') {
         this.east.push(this.teams[i]);
       }
-        else {
-          this.west.push(this.teams[i]);
+      else {
+        this.west.push(this.teams[i]);
       }
     }
   }

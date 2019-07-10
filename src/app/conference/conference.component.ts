@@ -19,7 +19,7 @@ export class ConferenceComponent implements OnInit {
     try {
       this.getTeamSub = this.teamServ.getAllTeams()
         .subscribe(data => {
-          { this.teams = data.results.data.team; this.getConference();console.log(data) }
+          { this.teams = data.results.data.team; this.getConference(); console.log(data) }
         })
     }
     catch (err) {
@@ -28,9 +28,9 @@ export class ConferenceComponent implements OnInit {
   }
 
   getConference() {
-    for(let i = 0; i < this.teams.length; i++) {
-      if(this.teams[i].conference === 'AFC') {
-       this.AFCteams.push(this.teams[i]);
+    for (let i = 0; i < this.teams.length; i++) {
+      if (this.teams[i].conference === 'AFC') {
+        this.AFCteams.push(this.teams[i]);
       }
       else {
         this.NFCteams.push(this.teams[i]);
@@ -38,7 +38,7 @@ export class ConferenceComponent implements OnInit {
     }
   }
 
-   sortAFCByName() {
+  sortAFCByName() {
     this.AFCteams.reverse();
   }
 
