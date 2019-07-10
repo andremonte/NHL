@@ -1,6 +1,7 @@
 import { TeamService } from './../Team/team.service';
 import { Component, OnInit } from '@angular/core';
 import { Team } from '../Team/team.model';
+import { temporaryAllocator } from '@angular/compiler/src/render3/view/util';
 
 @Component({
   selector: 'app-teams',
@@ -9,6 +10,7 @@ import { Team } from '../Team/team.model';
 })
 export class TeamsComponent implements OnInit {
   teams: Team[] = [];
+  id: Team[] = [];
   filteredTeams: Team[];
 
   constructor(private teamServ: TeamService) { }
@@ -29,4 +31,12 @@ export class TeamsComponent implements OnInit {
     this.teams.reverse();
   }
 
+  sortById() {
+/*     let min = 39;
+    for(let i = 0; i < this.teams.length; i++) {
+      if(+this.teams[i].id >= min) {
+        this.id.push()
+      }
+    } */
+  }
 }
