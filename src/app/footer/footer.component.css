@@ -1,3 +1,43 @@
-a {
-  text-decoration: none;
+.contact1 {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #003369;
+}
+.contact2 {
+  font-family: 'Poppins', sans-serif;
+  font-style: light;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 35px;
+  color:#ffffff;
+}
+.contact3 {
+  font-family: 'Lora', serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 36px;
+  color:rgba(255, 255, 255, 0.7);
+}
+
+.icons-name {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  color:#003369;
+}
+
+.email-end:link { /* unvisited link */
+  color:#5C5C5C !important;
+}
+.email-end:hover {/* mouse over*/
+  color: #003369 !important;
+}
+.email-end:visited { /* visited link */
+  color:#5C5C5C !important;
 }

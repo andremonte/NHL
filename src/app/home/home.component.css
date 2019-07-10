@@ -1,5 +1,5 @@
 .image {
-  background-image: url("../../assets/Images/larissa.jpg");
+  background-image: url("../../assets/Images/nfl-player.png");
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -18,4 +18,55 @@
   z-index: -5;
   background-color: rgba(0, 0, 0, 0.1);
 
+}
+
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  right: 0.3%;
+  -webkit-transform: translateY(-650%);
+  -ms-transform: translateY(-65%);
+  transform: translateY(-65%);
+  z-index: 2;
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 8px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 15px;
+  border-radius: 10%;
+  border: white solid 0.5px;
+}
+
+.facebook a:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.email a:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.email {
+  background: #55acee;
+  color: white;
+}
+
+.instagram a:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.instagram {
+  background: crimson;
+  color: white;
 }

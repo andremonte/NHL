@@ -1,8 +1,11 @@
-<div class="container-fluid justify-content-center">
+<div class="container-fluid py-5">
   <div class="row justify-content-center">
-    <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <h3 style="color: red;">AFC</h3>
-      <table class="table table-striped">
+    <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+      <h2 class="pt-1 pb-2" style="text-align: center">
+        <img src="../../assets/images/AFC.png" width="33" height="33" />
+        American Football Conference
+      </h2>
+      <table class="table table-striped table-bordered">
         <thead style="color: white; background-color: #003369;">
           <tr>
             <th scope="col">#</th>
@@ -13,17 +16,22 @@
         </thead>
         <tbody>
           <tr *ngFor="let team of AFCteams; let i = index">
-            <th scope="row">{{ i+1 }}</th>
-            <td>{{ team.name }} <strong>{{ team.nickname }}</strong></td>
+            <th scope="row">{{ i + 1 }}</th>
+            <td>
+              {{ team.name }} <strong>{{ team.nickname }}</strong>
+            </td>
             <td>{{ team.conference }}</td>
             <td>{{ team.division }}</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <h3 style="color: blue;">NFC</h3>
-      <table class="table">
+    <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+      <h2 class="pt-1 pb-2" style="text-align: center">
+        <img src="../../assets/images/NFC.png" width="33" height="33" />
+        National Football Conference
+      </h2>
+      <table class="table table-striped table-bordered">
         <thead style="color: #003369; background-color: white;">
           <tr>
             <th scope="col">#</th>
@@ -34,8 +42,10 @@
         </thead>
         <tbody>
           <tr *ngFor="let team of AFCteams; let i = index">
-            <th scope="row">{{ i+1 }}</th>
-            <td>{{ team.name }} <strong>{{ team.nickname }}</strong></td>
+            <th scope="row">{{ i + 1 }}</th>
+            <td>
+              {{ team.name }} <strong>{{ team.nickname }}</strong>
+            </td>
             <td>{{ team.conference }}</td>
             <td>{{ team.division }}</td>
           </tr>
@@ -44,4 +54,3 @@
     </div>
   </div>
 </div>
-

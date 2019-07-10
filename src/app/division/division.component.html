@@ -1,8 +1,8 @@
 <div class="container-fluid justify-content-center">
   <div class="row justify-content-center">
     <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <h3>North Division</h3>
-      <table class="table">
+      <h3><span class="first-letter">N</span>orth Division</h3>
+      <table class="table table-striped">
         <thead style="color: white; background-color: #003369;">
           <tr>
             <th scope="col">Id#</th>
@@ -11,8 +11,8 @@
             <th scope="col">Division</th>
           </tr>
         </thead>
-        <tbody *ngFor="let team of north;">
-          <tr>
+        <tbody>
+          <tr *ngFor="let team of north;">
             <th scope="row">{{ team.id }}</th>
             <td>{{ team.name }} <strong>{{ team.nickname }}</strong></td>
             <td>{{ team.conference }}</td>
@@ -22,8 +22,8 @@
       </table>
     </div>
     <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <h3>South Division</h3>
-      <table class="table table-hover">
+      <h3><span class="first-letter">S</span>outh Division</h3>
+      <table class="table table-striped">
         <thead style="color: white; background-color: #003369;">
           <tr>
             <th scope="col">Id#</th>
@@ -32,8 +32,8 @@
             <th scope="col">Division</th>
           </tr>
         </thead>
-        <tbody *ngFor="let team of south">
-          <tr>
+        <tbody>
+          <tr *ngFor="let team of south"s>
             <th scope="row">{{ team.id }}</th>
             <td>{{ team.name }} <strong>{{ team.nickname }}</strong></td>
             <td>{{ team.conference }}</td>
@@ -46,8 +46,8 @@
 
   <div class="row justify-content-center">
     <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <h3>East Division</h3>
-      <table class="table">
+      <h3><span class="first-letter">E</span>ast Division</h3>
+      <table class="table table-striped">
         <thead style="color: white; background-color: #003369;">
           <tr>
             <th scope="col">Id#</th>
@@ -56,8 +56,8 @@
             <th scope="col">Division</th>
           </tr>
         </thead>
-        <tbody *ngFor="let team of east">
-          <tr>
+        <tbody>
+          <tr *ngFor="let team of east">
             <th scope="row">{{ team.id }}</th>
             <td>{{ team.name }} <strong>{{ team.nickname }}</strong></td>
             <td>{{ team.conference }}</td>
@@ -67,8 +67,8 @@
       </table>
     </div>
     <div class="col-xl-5 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-      <h3>West Division</h3>
-      <table class="table">
+      <h3><span class="first-letter">W</span>est Division</h3>
+      <table class="table table-striped">
         <thead style="color: white; background-color: #003369;">
           <tr>
             <th scope="col">Id#</th>
@@ -77,8 +77,8 @@
             <th scope="col">Division</th>
           </tr>
         </thead>
-        <tbody *ngFor="let team of west">
-          <tr>
+        <tbody>
+          <tr *ngFor="let team of west">
             <th scope="row">{{ team.id }}</th>
             <td>{{ team.name }} <strong>{{ team.nickname }}</strong></td>
             <td>{{ team.conference }}</td>
