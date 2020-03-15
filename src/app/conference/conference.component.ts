@@ -29,7 +29,7 @@ export class ConferenceComponent implements OnInit {
 
   getConference() {
     for (let i = 0; i < this.teams.length; i++) {
-      if (this.teams[i].conference === 'AFC') {
+      if (this.teams[i].conference === 'American Football Conference') {
         this.AFCteams.push(this.teams[i]);
       }
       else {
