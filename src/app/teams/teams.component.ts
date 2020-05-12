@@ -30,6 +30,10 @@ export class TeamsComponent implements OnInit {
     this.filteredTeams.reverse();
   }
 
+/*   sortById() {
+    this.id = this.filteredTeams.sort((a, b) => Number(a.id) - Number(b.id));
+  } */
+
   removeDarkLine() {
     var line = document.getElementById('dark');
 
