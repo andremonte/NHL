@@ -5,9 +5,9 @@
       <table class="table table-striped">
         <thead style="color: white; background-color: #003369;">
           <tr>
-            <th class="click" scope="col">Id#</th>
-            <th class="click" scope="col">Team Name</th>
-            <th class="click" scope="col">Conference</th>
+            <th class="click" scope="col" (click)="sortById(north)">Id#</th>
+            <th class="click" scope="col" (click)="sortByName(north)">Team Name</th>
+            <th class="click" scope="col" (click)="sortByConference(north)">Conference</th>
             <th class="click" scope="col">Division</th>
           </tr>
         </thead>
@@ -26,9 +26,9 @@
       <table class="table table-striped pt-3">
         <thead style="color: white; background-color: #003369;">
           <tr>
-            <th class="click" scope="col">Id#</th>
-            <th class="click" scope="col">Team Name</th>
-            <th class="click" scope="col">Conference</th>
+            <th class="click" scope="col" (click)="sortById(south)">Id#</th>
+            <th class="click" scope="col" (click)="sortByName(south)">Team Name</th>
+            <th class="click" scope="col" (click)="sortByConference(south)">Conference</th>
             <th class="click" scope="col">Division</th>
           </tr>
         </thead>
@@ -50,10 +50,10 @@
       <table class="table table-striped pt-3">
         <thead style="color: white; background-color: #003369;">
           <tr>
-            <th class="click" scope="col">Id#</th>
-            <th class="click" scope="col">Team Name</th>
-            <th class="click" scope="col">Conference</th>
-            <th class="click" scope="col">Division</th>
+            <th class="click" scope="col" (click)="sortById(east)">Id#</th>
+            <th class="click" scope="col" (click)="sortByName(east)">Team Name</th>
+            <th class="click" scope="col" (click)="sortByConference(east)">Conference</th>
+            <th scope="col">Division</th>
           </tr>
         </thead>
         <tbody>
@@ -71,10 +71,10 @@
       <table class="table table-striped">
         <thead style="color: white; background-color: #003369;">
           <tr>
-            <th class="click" scope="col">Id#</th>
-            <th class="click" scope="col">Team Name</th>
-            <th class="click" scope="col">Conference</th>
-            <th class="click" scope="col">Division</th>
+            <th class="click" scope="col" (click)="sortById(west)">Id#</th>
+            <th class="click" scope="col" (click)="sortByName(west)">Team Name</th>
+            <th class="click" scope="col" (click)="sortByConference(west)">Conference</th>
+            <th scope="col">Division</th>
           </tr>
         </thead>
         <tbody>

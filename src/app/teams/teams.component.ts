@@ -9,17 +9,15 @@ import { Team } from '../Team/team.model';
 })
 export class TeamsComponent implements OnInit {
   teams: Team[] = [];
-  id: Team[] = [];
   filteredTeams: Team[];
   isSort: boolean = true;
-  backwords: boolean = false;
   constructor(private teamServ: TeamService) { }
 
   ngOnInit() {
     try {
       this.teamServ.getAllTeams()
         .subscribe(data => {
-          { this.teams = data.results.data.team; /* console.log(data) */ }
+          { this.teams = data.results.data.team; }
           this.filteredTeams = data.results.data.team;
         })
     }
@@ -48,13 +46,13 @@ export class TeamsComponent implements OnInit {
   }
 
   sortById() {
-    if(this.backwords) {
+    if(this.isSort) {
       this.filteredTeams = this.filteredTeams.sort( (a, b) => {
         if(a.id > b.id) { return -1;}
         else if(a.id < b.id) { return 1;}
         else { return 0;}
       });
-      this.backwords = false;
+      this.isSort = false;
     }
     else {
       this.filteredTeams = this.filteredTeams.sort( (a, b) => {
@@ -62,7 +60,7 @@ export class TeamsComponent implements OnInit {
         else if(a.id < b.id) { return -1;}
         else { return 0;}
       });
-      this.backwords = true;
+      this.isSort = true;
     }
   }
 
@@ -86,7 +84,6 @@ export class TeamsComponent implements OnInit {
   }
 
   sortByDivision() {
-      //this.filteredTeams = this.customSort(this.filteredTeams, 'division');
      if(this.isSort) {
       this.filteredTeams = this.filteredTeams.sort( (a, b) => {
         if(a.division > b.division) { return -1;}

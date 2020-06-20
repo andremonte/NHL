@@ -14,7 +14,6 @@ import { TeamsComponent } from './teams/teams.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ConferenceComponent } from './conference/conference.component';
 import { DivisionComponent } from './division/division.component';
-import { DataTableComponent } from './data-table/data-table.component';
 import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 
 
@@ -28,7 +27,6 @@ import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/mate
     TeamsComponent,
     ConferenceComponent,
     DivisionComponent,
-    DataTableComponent,
   ],
   imports: [
     BrowserModule,

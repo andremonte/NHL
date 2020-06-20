@@ -16,6 +16,8 @@ export class DivisionComponent implements OnInit {
   south: Team[] = [];
   east: Team[] = [];
   west: Team[] = [];
+  isSort: boolean = true;
+
   constructor(private teamServ: TeamService) { }
 
   ngOnInit() {
@@ -54,6 +56,170 @@ export class DivisionComponent implements OnInit {
       }
       else {
         this.west.push(this.teams[i]);
+      }
+    }
+  }
+
+  sortById(AFC_NFC_teams) {
+    if(AFC_NFC_teams[0].division === "North") {
+      if(this.isSort) {
+        this.north = AFC_NFC_teams.sort( (a, b) => {
+          if(a.id > b.id) { return -1;}
+          else if(a.id < b.id) { return 1;}
+          else { return 0;}
+        });
+        this.isSort = false;
+      }
+      else {
+        this.north = AFC_NFC_teams.sort( (a, b) => {
+          if(a.id > b.id) { return 1;}
+          else if(a.id < b.id) { return -1;}
+          else { return 0;}
+        });
+        this.isSort = true;
+      }
+    }
+    else if (AFC_NFC_teams[0].division === "South") {
+      if(this.isSort) {
+        this.south = AFC_NFC_teams.sort( (a, b) => {
+          if(a.id > b.id) { return -1;}
+          else if(a.id < b.id) { return 1;}
+          else { return 0;}
+        });
+        this.isSort = false;
+      }
+      else {
+        this.south = AFC_NFC_teams.sort( (a, b) => {
+          if(a.id > b.id) { return 1;}
+          else if(a.id < b.id) { return -1;}
+          else { return 0;}
+        });
+        this.isSort = true;
+      }
+    }
+    else if((AFC_NFC_teams[0].division === "East")) {
+      if(this.isSort) {
+        this.east = AFC_NFC_teams.sort( (a, b) => {
+          if(a.id > b.id) { return -1;}
+          else if(a.id < b.id) { return 1;}
+          else { return 0;}
+        });
+        this.isSort = false;
+      }
+      else {
+        this.east = AFC_NFC_teams.sort( (a, b) => {
+          if(a.id > b.id) { return 1;}
+          else if(a.id < b.id) { return -1;}
+          else { return 0;}
+        });
+        this.isSort = true;
+      }
+    }
+    else {
+      if(this.isSort) {
+        this.west = AFC_NFC_teams.sort( (a, b) => {
+          if(a.id > b.id) { return -1;}
+          else if(a.id < b.id) { return 1;}
+          else { return 0;}
+        });
+        this.isSort = false;
+      }
+      else {
+        this.west = AFC_NFC_teams.sort( (a, b) => {
+          if(a.id > b.id) { return 1;}
+          else if(a.id < b.id) { return -1;}
+          else { return 0;}
+        });
+        this.isSort = true;
+      }
+    }
+  }
+  sortByName(AFC_NFC_teams) {
+    if(AFC_NFC_teams[0].division == "North") {
+      this.north.reverse();
+    }
+    else if (AFC_NFC_teams[0].division == "South"){
+      this.south.reverse();
+    }
+    else if(AFC_NFC_teams[0].division == "East") {
+      this.east.reverse();
+    }
+    else {
+      this.west.reverse();
+    }
+  }
+
+  sortByConference(AFC_NFC_teams) {
+    if(AFC_NFC_teams[0].division === "North") {
+      if(this.isSort) {
+        this.north = AFC_NFC_teams.sort( (a, b) => {
+          if(a.id > b.id) { return -1;}
+          else if(a.id < b.id) { return 1;}
+          else { return 0;}
+        });
+        this.isSort = false;
+      }
+      else {
+        this.north = AFC_NFC_teams.sort( (a, b) => {
+          if(a.id > b.id) { return 1;}
+          else if(a.id < b.id) { return -1;}
+          else { return 0;}
+        });
+        this.isSort = true;
+      }
+    }
+    else if (AFC_NFC_teams[0].division === "South") {
+      if(this.isSort) {
+        this.south = AFC_NFC_teams.sort( (a, b) => {
+          if(a.id > b.id) { return -1;}
+          else if(a.id < b.id) { return 1;}
+          else { return 0;}
+        });
+        this.isSort = false;
+      }
+      else {
+        this.south = AFC_NFC_teams.sort( (a, b) => {
+          if(a.id > b.id) { return 1;}
+          else if(a.id < b.id) { return -1;}
+          else { return 0;}
+        });
+        this.isSort = true;
+      }
+    }
+    else if((AFC_NFC_teams[0].division === "East")) {
+      if(this.isSort) {
+        this.east = AFC_NFC_teams.sort( (a, b) => {
+          if(a.id > b.id) { return -1;}
+          else if(a.id < b.id) { return 1;}
+          else { return 0;}
+        });
+        this.isSort = false;
+      }
+      else {
+        this.east = AFC_NFC_teams.sort( (a, b) => {
+          if(a.id > b.id) { return 1;}
+          else if(a.id < b.id) { return -1;}
+          else { return 0;}
+        });
+        this.isSort = true;
+      }
+    }
+    else {
+      if(this.isSort) {
+        this.west = AFC_NFC_teams.sort( (a, b) => {
+          if(a.id > b.id) { return -1;}
+          else if(a.id < b.id) { return 1;}
+          else { return 0;}
+        });
+        this.isSort = false;
+      }
+      else {
+        this.west = AFC_NFC_teams.sort( (a, b) => {
+          if(a.id > b.id) { return 1;}
+          else if(a.id < b.id) { return -1;}
+          else { return 0;}
+        });
+        this.isSort = true;
       }
     }
   }

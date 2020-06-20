@@ -7,10 +7,10 @@
       <table class="table table-striped table-bordered">
         <thead style="color: white; background-color: #003369;">
           <tr>
-            <th class="click" scope="col">#</th>
-            <th class="click" scope="col" (click)="sortAFCByName()">Team Name</th>
-            <th class="click" scope="col">Conference</th>
-            <th class="click" scope="col">Division</th>
+            <th class="click" scope="col" (click)="sortById(AFCteams)">#</th>
+            <th class="click" scope="col" (click)="sortByName(AFCteams)">Team Name</th>
+            <th scope="col">Conference</th>
+            <th class="click" scope="col" (click)="sortByDivision(AFCteams)">Division</th>
           </tr>
         </thead>
         <tbody>
@@ -32,10 +32,10 @@
       <table class="table table-striped table-bordered">
         <thead style="color: #003369; background-color: white;">
           <tr>
-            <th class="click" scope="col">#</th>
-            <th class="click" scope="col" (click)="sortNFCByName()">Team Name</th>
-            <th class="click" scope="col">Conference</th>
-            <th class="click" scope="col">Division</th>
+            <th class="click" scope="col" (click)="sortById(NFCteams)">#</th>
+            <th class="click" scope="col" (click)="sortByName(NFCteams)">Team Name</th>
+            <th scope="col">Conference</th>
+            <th class="click" scope="col" (click)="sortByDivision(NFCteams)">Division</th>
           </tr>
         </thead>
         <tbody>

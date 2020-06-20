@@ -11,9 +11,7 @@ export class TeamService {
   constructor(private http: HttpClient) { }
 
   getAllTeams(): Observable<any> {
-/*      let headers = new HttpHeaders().set("Access-Control-Allow-Headers",
-    "Origin, X-Requested-With, Content-Type, Accept");  */
-    return this.http.get<any>(`${this.teamUrl}`, /* {headers} */);
+    return this.http.get<any>(`${this.teamUrl}`);
   }
 
 }
