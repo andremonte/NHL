@@ -1,10 +1,6 @@
-.click {
-  cursor: pointer;
-}
-
 .text-line {
   background-color: transparent;
-  font-family: 'Bahianita', cursive; 
+  font-family: 'Bahianita', cursive;
   font-size: 25px;
   color: #676363;
   outline: none;
@@ -16,8 +12,4 @@
   border-bottom: solid #dad9d9 2px;
   max-width: 100%;
   min-width: 100%;
-}
-
-.obs {
-  font-size: 10px;
 }

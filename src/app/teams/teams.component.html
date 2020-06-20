@@ -1,9 +1,3 @@
-<!-- <app-data-table>
-</app-data-table> -->
-
-
-<!-- <table class="table table-striped table-bordered table-hover table-condensed"></table> -->
-
 <div class="container-fluid">
   <div class="row justify-content-center">
     <div class="col-xl-12, col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -37,14 +31,14 @@
 
       <h2 class="pt-2 pb-2" style="text-align: center"><img src="../../assets/images/NFL.png" width="50" height="55">
         National Football League</h2>
+        <small>* click on fields to sort</small>
       <table class="pb-5 table table-striped table-bordered">
         <thead style="color: white; background-color: #003369;">
           <tr>
-            <th class="click" title="sort by id" scope="col">Id#</th>
-            <th class="click" title="sort by name" scope="col" (click)="sortByName()">Team Name<span class="obs"> (Click
-                to Sort)</span></th>
-            <th class="click" title="sort by id" scope="col">Conference</th>
-            <th class="click" scope="col">Division</th>
+            <th class="click" title="sort by id" scope="col" (click)="sortById()">Id#</th>
+            <th class="click" title="sort by name" scope="col" (click)="sortByName()">Team Name</th>
+            <th class="click" title="sort" scope="col" (click)="sortByConference()">Conference</th>
+            <th class="click" scope="col" (click)="sortByDivision()">Division</th>
           </tr>
         </thead>
         <tbody>

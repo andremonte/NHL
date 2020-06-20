@@ -11,7 +11,8 @@ export class TeamsComponent implements OnInit {
   teams: Team[] = [];
   id: Team[] = [];
   filteredTeams: Team[];
-
+  isSort: boolean = true;
+  backwords: boolean = false;
   constructor(private teamServ: TeamService) { }
 
   ngOnInit() {
@@ -26,13 +27,83 @@ export class TeamsComponent implements OnInit {
       throw err;
     }
   }
+
   sortByName() {
-    this.filteredTeams.reverse();
+    if(this.isSort) {
+      this.filteredTeams = this.filteredTeams.sort( (a, b) => {
+        if(a.name > b.name) { return -1;}
+        else if(a.name < b.name) { return 1;}
+        else { return 0;}
+      });
+      this.isSort = false;
+    }
+    else {
+      this.filteredTeams = this.filteredTeams.sort( (a, b) => {
+        if(a.name > b.name) { return 1;}
+        else if(a.name < b.name) { return -1;}
+        else { return 0;}
+      });
+      this.isSort = true;
+    }
   }
 
-/*   sortById() {
-    this.id = this.filteredTeams.sort((a, b) => Number(a.id) - Number(b.id));
-  } */
+  sortById() {
+    if(this.backwords) {
+      this.filteredTeams = this.filteredTeams.sort( (a, b) => {
+        if(a.id > b.id) { return -1;}
+        else if(a.id < b.id) { return 1;}
+        else { return 0;}
+      });
+      this.backwords = false;
+    }
+    else {
+      this.filteredTeams = this.filteredTeams.sort( (a, b) => {
+        if(a.id > b.id) { return 1;}
+        else if(a.id < b.id) { return -1;}
+        else { return 0;}
+      });
+      this.backwords = true;
+    }
+  }
+
+  sortByConference() {
+    if(this.isSort) {
+      this.filteredTeams = this.filteredTeams.sort( (a, b) => {
+        if(a.conference > b.conference) { return -1;}
+        else if(a.conference < b.conference) { return 1;}
+        else { return 0;}
+      });
+      this.isSort = false;
+    }
+    else {
+      this.filteredTeams = this.filteredTeams.sort( (a, b) => {
+        if(a.conference > b.conference) { return 1;}
+        else if(a.conference < b.conference) { return -1;}
+        else { return 0;}
+      });
+      this.isSort = true;
+    }
+  }
+
+  sortByDivision() {
+      //this.filteredTeams = this.customSort(this.filteredTeams, 'division');
+     if(this.isSort) {
+      this.filteredTeams = this.filteredTeams.sort( (a, b) => {
+        if(a.division > b.division) { return -1;}
+        else if(a.division < b.division) { return 1;}
+        else { return 0;}
+      });
+      this.isSort = false;
+    }
+    else {
+      this.filteredTeams = this.filteredTeams.sort( (a, b) => {
+        if(a.division > b.division) { return 1;}
+        else if(a.division < b.division) { return -1;}
+        else { return 0;}
+      });
+      this.isSort = true;
+    }
+  }
 
   removeDarkLine() {
     var line = document.getElementById('dark');
@@ -53,6 +124,12 @@ export class TeamsComponent implements OnInit {
   }
 
   searchConference(event: any) {
+    if(event.target.value.toLocaleLowerCase() === 'afc') {
+      event.target.value = 'American Football Conference';
+    }
+    else if(event.target.value.toLocaleLowerCase() === 'nfc') {
+      event.target.value = 'American Football Conference';
+    }
     this.filteredTeams = this.teams.filter((value) => {
       return value.conference.toLowerCase().includes(event.target.value.toLowerCase());
     })
@@ -64,4 +141,38 @@ export class TeamsComponent implements OnInit {
     })
   }
 
+  customSort(arr: Team[], field: string) {
+    switch(field) {
+      case 'id':
+        alert('entrou id');
+        return arr.sort( (a, b) => {
+          if(a.id > b.id) { return 1;}
+          else if(a.id < b.id) {return -1;}
+          else {return 0;}
+        })
+
+      case 'name':
+        alert('entrou name');
+        return arr.sort( (a, b) => {
+          if(a.name > b.name) { return 1;}
+          else if(a.name < b.name) {return -1;}
+          else {return 0;}
+        }).reverse();
+
+      case 'division':
+        alert('entnrou division');
+        return arr.sort( (a, b) => {
+          if(a.division > b.division) { return 1;}
+          else if(a.division < b.division) {return -1;}
+          else {return 0;}
+        }).reverse();
+
+      case 'conference':
+        return arr.sort( (a, b) => {
+          if(a.conference > b.conference) { return 1;}
+          else if(a.conference < b.conference) {return -1;}
+          else {return 0;}
+        })
+    }
+  }
 }
